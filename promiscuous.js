@@ -75,7 +75,7 @@
 
   // Finalizes the promise by resolving/rejecting it with the transformed value
   function finalize(promise, resolve, reject, value, transform) {
-    setImmediate(function () {
+    setTimeout(function () {
       try {
         // Transform the value through and check whether it's a promise
         value = transform(value);
@@ -91,7 +91,7 @@
           transform.call(value, resolve, reject);
       }
       catch (error) { reject(error); }
-    });
+    }, 1);
   }
 
   // Export the main module
