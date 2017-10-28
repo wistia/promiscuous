@@ -1,5 +1,11 @@
 /**@license MIT-promiscuous-©Ruben Verborgh*/
 (function (func, obj) {
+  // If Promise is defined globally when this runs, just use that.
+  if (window.Promise) {
+    module.exports = window.Promise;
+    return;
+  }
+
   // Type checking utility function
   function is(type, item) { return (typeof item)[0] == type; }
 
