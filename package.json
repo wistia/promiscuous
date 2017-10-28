@@ -1,6 +1,6 @@
 {
   "name": "promiscuous",
-  "version": "0.7.0-set-timeout",
+  "version": "0.7.0-native-set-immediate",
   "description": "A minimal and fast promise implementation",
   "author": "Ruben Verborgh <ruben.verborgh@gmail.com>",
   "license": "MIT",
